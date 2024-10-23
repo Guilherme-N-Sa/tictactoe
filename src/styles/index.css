@@ -1,0 +1,60 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif; /* ou qualquer outra fonte padrão */
+}
+
+body {
+  line-height: 1.5;
+  background-color: #f8f8f8; /* Cor de fundo padrão, se desejar */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove a decoração de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove os estilos padrão de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ajuste de botões */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Formulários básicos */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* Box-sizing para pseudo-elementos */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
