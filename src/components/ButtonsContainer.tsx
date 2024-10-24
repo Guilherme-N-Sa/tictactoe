@@ -7,10 +7,11 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (max-width: 768px) {
-    gap: 5px;
+  @media (max-width: 1600px) {
+    gap: 10px;
     margin: 10px 0;
   }
+
 `;
 
 const Button = styled.button`
@@ -32,6 +33,11 @@ const Button = styled.button`
   &:active {
     background-color: #004494;
     transform: translateY(0);
+  }
+
+  @media (max-width: 1600px) {
+    padding: 10px 10px;
+    font-size: 0.9rem;
   }
 `;
 
