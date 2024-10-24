@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     padding: 5px 10px;
     font-size: 1.4rem;
     margin-bottom: 15px;
-}
+  }
 `;
 
 export default function Header() {
