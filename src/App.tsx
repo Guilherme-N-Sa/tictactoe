@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import PlayersContainer from "./components/PlayersContainer";
+import PlayersContainer from "./components/players-container/PlayersContainer";
 import ButtonContainer from "./components/ButtonsContainer";
 import GameBoard from "./components/GameBoard";
 import Header from "./components/Header";
+import { useState } from "react";
+import { IPlayersData } from "./components/players-container/Types";
 
 const Wrapper = styled.div`
   background-image: url("bg.webp");
@@ -27,10 +29,10 @@ const Overlay = styled.div`
 `;
 
 const GameZone = styled.div`
-  width: 80%;
-  max-width: 600px;
+  width: 50%;
+  max-width: 500px;
   height: auto;
-  background-color: rgba(255, 255, 255, 0.70);
+  background-color: rgba(255, 255, 255, 0.7);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,22 +41,40 @@ const GameZone = styled.div`
   z-index: 1;
   padding: 30px;
 
-  @media (max-width: 768px) {
-    padding: 10px;
+  @media (max-width: 1600px) {
+    padding: 15px;
+    max-width: 400px;
   }
 `;
 
 const initialBoard = new Array(3).fill(null).map(() => new Array(3).fill(null));
 
 function App() {
+  const [players, setPlayers] = useState<IPlayersData>({
+    1: {
+      id: 1,
+      name: "Player 1",
+      symbol: "X",
+    },
+    2: {
+      id: 2,
+      name: "Player 2",
+      symbol: "O",
+    },
+  });
   const board = initialBoard;
+  const activePlayer = 1;
 
   return (
     <Wrapper>
       <Overlay />
       <Header />
       <GameZone>
-        <PlayersContainer />
+        <PlayersContainer
+          players={players}
+          setPlayers={setPlayers}
+          activePlayer={activePlayer}
+        />
         <ButtonContainer />
         <GameBoard board={board} />
       </GameZone>
