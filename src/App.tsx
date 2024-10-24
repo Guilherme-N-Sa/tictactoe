@@ -30,7 +30,7 @@ const GameZone = styled.div`
   width: 80%;
   max-width: 600px;
   height: auto;
-  background-color: rgba(255, 255, 255, 0.70);
+  background-color: rgba(255, 255, 255, 0.75);
   display: flex;
   justify-content: space-between;
   align-items: center;
