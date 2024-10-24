@@ -22,7 +22,7 @@ const Player = styled.button`
   font-size: 1.2rem;
   text-align: center;
   width: 45%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
     width: 80%;
