@@ -8,6 +8,12 @@ const Wrapper = styled.div`
   margin-bottom: 40px;
   font-size: 2rem;
   color: white;
+
+  @media (max-width: 1600px) {
+    padding: 5px 10px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
 `;
 
 export default function Header() {
