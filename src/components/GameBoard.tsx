@@ -21,7 +21,7 @@ const Cell = styled.button`
   align-items: center;
   font-size: 2rem;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
   transition: background-color 0.3s;
 
