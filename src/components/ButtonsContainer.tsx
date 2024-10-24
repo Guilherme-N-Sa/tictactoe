@@ -11,14 +11,13 @@ const Wrapper = styled.div`
     gap: 10px;
     margin: 10px 0;
   }
-
 `;
 
 const Button = styled.button`
-  padding: 12px 24px;
+  padding: 12px 36px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: rgb(89 120 141);
   color: white;
   font-size: 1rem;
   cursor: pointer;
@@ -26,7 +25,7 @@ const Button = styled.button`
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    background-color: #0056b3;
+    background-color: rgb(26 99 149);
     transform: translateY(-2px);
   }
 
@@ -36,16 +35,25 @@ const Button = styled.button`
   }
 
   @media (max-width: 1600px) {
-    padding: 10px 10px;
+    padding: 10px 30px;
     font-size: 0.9rem;
   }
 `;
 
-export default function ButtonsContainer() {
+interface IButtonsContainerProps {
+  setLog: any;
+}
+
+export default function ButtonsContainer({ setLog }: IButtonsContainerProps) {
   return (
     <Wrapper>
-      <Button>Start Game</Button>
-      <Button>Restart</Button>
+      <Button
+        onClick={() => {
+          setLog((prev: any) => []);
+        }}
+      >
+        Restart
+      </Button>
     </Wrapper>
   );
 }
