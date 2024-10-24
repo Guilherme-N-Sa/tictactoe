@@ -21,7 +21,7 @@ const Button = styled.button`
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.4s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 
   &:hover {
