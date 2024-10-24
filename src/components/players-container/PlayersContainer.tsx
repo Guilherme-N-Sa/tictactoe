@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 interface IPlayersContainerProps {
   players: IPlayersData;
   setPlayers: (func: (prev: IPlayersData) => IPlayersData) => void;
-  activePlayer: number;
+  activePlayer: string;
 }
 
 export default function PlayersContainer({
@@ -34,7 +34,12 @@ export default function PlayersContainer({
   return (
     <Wrapper>
       {Object.values(players).map((player) => (
-        <Player key={player.id} setPlayers={setPlayers} player={player} isActive={activePlayer === player.id}/>
+        <Player
+          key={player.symbol}
+          setPlayers={setPlayers}
+          player={player}
+          isActive={activePlayer === player.symbol}
+        />
       ))}
     </Wrapper>
   );
