@@ -44,7 +44,9 @@ export default function GameBoard({ board }: GameBoardProps) {
     <Wrapper>
       {board.map((row, i) => (
         <>
-          {row.map((cell, j) => (
+          {row.map((cell, j) => {
+            console.log(i, j);
+            return (
             <Cell
               disabled={!!cell}
               className={cell ? "deactivated" : ""}
@@ -52,7 +54,7 @@ export default function GameBoard({ board }: GameBoardProps) {
             >
               {cell}
             </Cell>
-          ))}
+          )})}
         </>
       ))}
     </Wrapper>
