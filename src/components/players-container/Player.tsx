@@ -1,19 +1,20 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { IPlayerData, IPlayersData } from "./Types";
 import EditSVG from "../../svgs/Edit";
 
 const Wrapper = styled.button`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 20px;
   border-radius: 5px;
   background-color: #ffffff;
   color: black;
   font-size: 1.2rem;
-  text-align: center;
   width: 45%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
 
   @media (max-width: 1600px) {
     padding: 10px 10px;
@@ -28,7 +29,8 @@ const Wrapper = styled.button`
     border-radius: 5px;
     border: 1px solid #000;
     font-size: 0.8rem;
-    width: 80%;
+    width: 90%;
+    margin: auto;
   }
 
   .symbol {
@@ -38,7 +40,15 @@ const Wrapper = styled.button`
     border-radius: 5px;
   }
 
-  
+  &:hover {
+    cursor: pointer;
+    background-color: #f0f0f0;
+  }
+
+  &.active {
+    border: 2px solid black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 interface IPlayerProps {
@@ -47,30 +57,33 @@ interface IPlayerProps {
   isActive?: boolean;
 }
 
-export default function Player({ setPlayers, player }: IPlayerProps) {
-  const [editingPlayer, setEditingPlayer] = useState(false);
+export default function Player({ setPlayers, player, isActive }: IPlayerProps) {
+  const [editingPlayer, setEditingPlayer] = useState<boolean>(false);
 
-  const handleEditPlayer = () => {
+  const handleEditPlayer = useCallback(() => {
     setEditingPlayer(true);
-  };
+  }, []);
 
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newName = e.target.value;
-    setPlayers((prev) => ({
-      ...prev,
-      [player.id]: {
-        ...prev[player.id],
-        name: newName,
-      },
-    }));
-  };
+  const handleNameChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const newName = e.target.value;
+      setPlayers((prev) => ({
+        ...prev,
+        [player.symbol]: {
+          ...prev[player.symbol],
+          name: newName,
+        },
+      }));
+    },
+    [setPlayers, player.symbol]
+  );
 
-  const handleBlur = () => {
+  const handleBlur = useCallback(() => {
     setEditingPlayer(false);
-  };
+  }, []);
 
   return (
-    <Wrapper onClick={handleEditPlayer}>
+    <Wrapper onClick={handleEditPlayer} className={isActive ? "active" : ""}>
       {editingPlayer ? (
         <input
           defaultValue={player.name}
