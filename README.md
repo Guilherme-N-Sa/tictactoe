@@ -26,13 +26,6 @@ The result is a classic Tic-Tac-Toe game, built using modern web development pra
 
 After focusing primarily on backend and infrastructure-related tasks, I felt the need to revisit React to ensure my frontend skills remain sharp. This project serves as both a learning opportunity and a demonstration of best practices for building a simple but complete React application.
 
-## Future Enhancements
-
-- Implement game history to allow players to navigate back to previous moves.
-- Add animations for smoother user interactions.
-- Extend the game with custom themes and difficulty levels.
-- Explore additional state management libraries, such as Redux, for more complex features.
-
 ## Acknowledgments
 
 Special thanks to the open-source community for providing inspiration and resources for revisiting and refining my frontend development skills.
