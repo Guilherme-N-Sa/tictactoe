@@ -4,7 +4,7 @@ This project is a personal endeavor aimed at dusting off my React skills. Althou
 
 The result is a classic Tic-Tac-Toe game, built using modern web development practices to create a responsive and engaging user experience.
 
-![Tic-Tac-Toe Screenshot](/public/ss.png)
+![Tic-Tac-Toe Screenshot](/ss.png)
 
 ## Features
 
