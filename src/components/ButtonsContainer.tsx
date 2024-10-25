@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   padding: 12px 36px;
   border: none;
   border-radius: 5px;
