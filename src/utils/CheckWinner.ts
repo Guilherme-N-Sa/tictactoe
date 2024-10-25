@@ -21,5 +21,13 @@ export default function checkWinner(board: Board): string | null {
     return board[0][2];
   }
 
-  return null;
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (board[i][j] === null) {
+        return null;
+      }
+    }
+  }
+
+  return "Tie";
 }
