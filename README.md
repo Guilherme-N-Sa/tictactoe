@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# Tic-Tac-Toe Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a personal endeavor aimed at dusting off my React skills. Although I have substantial experience with React, I took a break of a little over a year from frontend development and decided it was time to revisit the basics to refresh the knowledge I had acquired.
 
-## Available Scripts
+The result is a classic Tic-Tac-Toe game, built using modern web development practices to create a responsive and engaging user experience.
 
-In the project directory, you can run:
+![Tic-Tac-Toe Screenshot](/public/ss.png)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Responsive Design:** The game adapts smoothly across different screen sizes, ensuring a consistent experience on desktops, tablets, and mobile devices.
+- **Player Management:** Allows switching between players and keeps track of the active player.
+- **Win Detection:** The game accurately detects when a player has won or when there is a tie.
+- **Modular Codebase:** The project leverages modular component design for maintainability and scalability.
+- **Styled Components:** Uses `styled-components` for a clean and manageable approach to styling.
+- **TypeScript Integration:** Type safety and improved code clarity with TypeScript.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React** with Hooks
+- **TypeScript** for static type checking
+- **Styled Components** for component-level styling
+- **Functional Programming Paradigms** for state management and component rendering
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Motivation
 
-### `npm run build`
+After focusing primarily on backend and infrastructure-related tasks, I felt the need to revisit React to ensure my frontend skills remain sharp. This project serves as both a learning opportunity and a demonstration of best practices for building a simple but complete React application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Enhancements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Implement game history to allow players to navigate back to previous moves.
+- Add animations for smoother user interactions.
+- Extend the game with custom themes and difficulty levels.
+- Explore additional state management libraries, such as Redux, for more complex features.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acknowledgments
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Special thanks to the open-source community for providing inspiration and resources for revisiting and refining my frontend development skills.
