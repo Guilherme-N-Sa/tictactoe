@@ -9,6 +9,7 @@ import { ILog } from "./components/game-board/Types";
 import { initialBoard, initialPlayers } from "./constants";
 import checkWinner from "./utils/CheckWinner";
 import Dimmer from "./components/Dimmer";
+import WinningModal from "./components/winning-modal/WinningModal";
 
 const Wrapper = styled.div`
   background-image: url("bg.webp");
@@ -48,10 +49,8 @@ function App() {
 
   const board = initialBoard.map((row) => [...row]);
 
-  // Determine the active player based on the log
-  let activePlayer = log.length === 0 || log[log.length - 1].player === "X" ? "O" : "X";
+  let activePlayer = log.length === 0 || log[log.length - 1].player === "O" ? "X" : "O";
 
-  // Update the board based on the log
   log.forEach(({ player, position }) => {
     board[position[0]][position[1]] = players[player].symbol;
   });
@@ -71,6 +70,7 @@ function App() {
         <ButtonContainer setLog={setLog} />
         <GameBoard board={board} log={log} setLog={setLog} />
       </GameZone>
+      {winner && <WinningModal winner={winner} players={players} />}
     </Wrapper>
   );
 }
