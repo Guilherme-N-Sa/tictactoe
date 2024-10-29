@@ -23,14 +23,10 @@ const Cell = styled.button`
   font-size: 5rem;
   font-weight: bold;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  cursor: pointer;
+  background-color: ${({ disabled }) =>
+    disabled ? "rgba(255, 255, 255, 0.5)" : "rgba(255, 255, 255, 0.1)"};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   transition: background-color 0.3s;
-
-  &.deactivated {
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: not-allowed;
-  }
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.7);
@@ -63,7 +59,6 @@ export default function GameBoard({ board, log, setLog }: GameBoardProps) {
             <Cell
               onClick={() => HandleCellSelection(i, j)}
               disabled={!!cell}
-              className={cell ? "deactivated" : ""}
               key={`${i}-${j}`}
             >
               {cell}
